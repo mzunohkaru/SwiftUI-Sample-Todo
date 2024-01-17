@@ -31,7 +31,19 @@
 
 ・データ追加
 
-![image_123986672 (3)](https://github.com/mzunohkaru/SwiftUI-Sample-Todo/assets/99012157/16bc5720-9f8e-4aef-a4fe-e84e9afde5cb)
+![image_123986672 (3)](https://github.com/mzunohkaru/SwiftUI-Sample-Todo/assets/99012157/338e21c6-f5d1-459e-9edc-e1d93efa298d)
 
 
-![image_123986672 (4)](https://github.com/mzunohkaru/SwiftUI-Sample-Todo/assets/99012157/122133e0-b98b-427d-b27e-2b9093156c67)
+・データ削除
+
+![image_123986672](https://github.com/mzunohkaru/SwiftUI-Sample-Todo/assets/99012157/3566abba-210d-4ae0-be65-96c5023ad1d7)
+
+
+・データ受け渡し
+
+![image_123986672 (1)](https://github.com/mzunohkaru/SwiftUI-Sample-Todo/assets/99012157/10358bd4-7671-4e3d-93f1-cea219ffc369)
+
+
+・データ編集
+
+![image_123986672 (2)](https://github.com/mzunohkaru/SwiftUI-Sample-Todo/assets/99012157/5f116250-fa29-4666-96cf-04644798ecc5)
