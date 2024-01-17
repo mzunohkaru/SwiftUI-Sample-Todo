@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import CoreData
 
 struct SimplyView: View {
     
@@ -23,7 +22,7 @@ struct SimplyView: View {
                 // userData.tasksの要素を表示する
                 ForEach(userData.tasks) { task in
                     Button(action: {
-                        CheckBox(task: task)
+                        checkBox(task: task)
                     }) {
                         ListRow(task: task.title, isCheck: task.checked)
                     }
@@ -50,7 +49,7 @@ struct SimplyView: View {
             // アラート
             .alert("Alert Title", isPresented: $isShowAlert) {
                 Button("Delete", role: .destructive){
-                    DeleteTask()
+                    deleteTask()
                 }
                 Button("Cansel", role: .cancel){}
             } message: {
@@ -60,7 +59,7 @@ struct SimplyView: View {
             .confirmationDialog("Dialog Title", isPresented: $isShowDialog) {
                 ForEach(userData.tasks) { task in
                     Button(task.title){
-                        CheckBox(task: task)
+                        checkBox(task: task)
                     }
                 }
                 Button("Cansel", role: .cancel){}
@@ -75,7 +74,7 @@ struct SimplyView: View {
         }
     }
     
-    func CheckBox(task: Task) {
+    private func checkBox(task: Task) {
         // タップしたuserData.tasksの要素番号（firstIndexはオプショナル型）を返す
         guard let index = self.userData.tasks.firstIndex(of: task) else{
             // 要素番号が null の場合
@@ -85,7 +84,7 @@ struct SimplyView: View {
         self.userData.tasks[index].checked.toggle()
     }
     
-    func DeleteTask() {
+    private func deleteTask() {
         // filter : 配列から引数の条件に一致する要素だけが格納された配列を返す
         let necessaryTask = self.userData.tasks.filter({!$0.checked})
         self.userData.tasks = necessaryTask
